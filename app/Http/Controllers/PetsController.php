@@ -54,9 +54,10 @@ class PetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($pet_id)
     {
-        //
+        $pet = Pet::find($pet_id);
+        return view('pets.show', ['pet' => $pet]);
     }
 
     /**
