@@ -14,7 +14,6 @@ class CreateCommentsForDonorsTable extends Migration
     {
         Schema::table('donors', function (Blueprint $table) {
             $table->text('comment')->nullable();
-            $table->unsignedInteger('pet_id')->default(0);
         });
     }
 
