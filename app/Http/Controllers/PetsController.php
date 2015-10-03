@@ -24,7 +24,7 @@ class PetsController extends Controller
 
         $donors = Donor::all();
 
-        return view('pets.index', ['pets' => $pets, 'updates' => $updates, 'donors' => $donors]);
+        return view('pets.index', ['pets' => $pets]);
     }
 
     /**
