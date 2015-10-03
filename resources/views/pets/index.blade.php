@@ -20,7 +20,7 @@
 	    	<div class="pet">
 		        <h1>{{ $pet->name }}</h1>
 		        <h2>{{ $pet->age }}</h2>
-		        <img src="{{ $pet->getDefaultImage() }}">
+		        <img src="{{ $pet->getDefaultImageURL() }}">
 	    	</div>
 	    @endforeach
 	</div>

@@ -9,8 +9,8 @@
     <meta name="description"
           content="At PUP we strive to make it easier by helping you find the best match from day one.">
     <link href="http://fonts.googleapis.com/css?family=Meta+Medium" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript" src="pup.js"></script>
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="<?php echo $site; ?>pup.js"></script>
 
 </head>
 
@@ -127,7 +127,7 @@
                             <div id="rightcolumn">
 
 
-                                <div style="padding-left:30px; width: 680px;">
+                                <div style="padding-left:30px;">
                                     <div class="container">
                                         @yield('content')
                                     </div>
