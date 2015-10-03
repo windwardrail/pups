@@ -8,19 +8,24 @@
     			Intro copy donate money for rescue puppies below:
     		</p>
     	</div>
-    	<div class="donation-honor">
-
+    	<div class="donation-wrapper">
+	    	<div class="donation honor">
+	    		Donate to honor
+	    	</div>
+	    	<div class="donation general">
+	    		General donation
+	    	</div>
     	</div>
-    	<div class="donation-general">
-
-    	</div>
+    	<p class="clear"></p>
 	</div>
 	<div class="pets-wrapper">
 	    @foreach($pets as $pet)
-	    	<div class="pet">
-		        <h1>{{ $pet->name }}</h1>
-		        <h2>{{ $pet->age }}</h2>
-		        <img src="{{ $pet->getDefaultImageURL() }}">
+	    	<div class="pet-wrapper">
+		    	<div class="pet" data-id="{{$pet->id}}" >
+			        <h1>{{ $pet->name }}</h1>
+			        <img src="{{ $pet->getDefaultImageURL() }}">
+			        <div class="pet-hover"></div>
+		    	</div>
 	    	</div>
 	    @endforeach
 	</div>

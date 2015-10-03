@@ -1,6 +1,80 @@
 .pets-wrapper {
-	background: #CCC;
+	
 }
 #rightcolumn .container {
 	width: 700px !important;
+}
+
+.headline h1 {
+	color: #dd1e26;
+}
+
+.headline {
+	width: 55%;
+	float: left;
+}
+
+.donation-wrapper {
+	width: 45%;
+	float: left;
+	padding-top: 30px;
+}
+
+.donation-wrapper .donation {
+	color: #FFF;
+	background: #dd1e26;
+	width: 48%;
+	margin: 0 0 0 2%;
+	float: left;
+	padding: 5px 10px;
+	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	text-align: center;
+  	font-size: 20px;
+  	border-radius: 10px;
+
+}
+.pet .pet-hover {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	z-index: 2;
+	background: #000;
+	display: none;
+	opacity: .4;
+}
+.pet {
+	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	margin-right: 10px;
+  	position: relative;
+  	z-index: 1;
+  	cursor: pointer;
+}
+.pet h1 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: none;
+	text-align: center;
+	z-index: 3;
+	color: #FFF;
+}
+.pet img {
+	width: 100%;
+}
+.pet-wrapper {
+	width: 33%;
+	float: left;
+}
+
+.clear {
+	clear: both;
 }

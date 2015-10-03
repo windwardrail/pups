@@ -231,5 +231,26 @@
     <!-- end center -->
 </div>
 <!-- end pagelong -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $( document ).ready(function() {
+        // Selector - Method - Parameter (Take this, Do this, With these conditions)
+        $(".pet").mouseover(function(){
+            var $this = $(this);
+            var heightOfPet = $this.height();
+            var h1 = $this.find("h1");
+            var top = (heightOfPet - h1.height()) / 2;
+            h1.css("top", top);
+            h1.show();
+            $this.find(".pet-hover").show();
+        }).mouseout(function(){
+            $(this).find("h1").hide();
+            $(this).find(".pet-hover").hide();
+        }).click(function() {
+            var $this = $(this);
+            document.location.href = "/pets/" + $this.data("id");
+        });
+    });
+</script>
 </body>
 </html>
