@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
          $this->call(UpdatesSeeder::class);
          $this->call(DonorSeeder::class);
 
+         $this->call(StorySeeder::class);
+
 
         Model::reguard();
     }
