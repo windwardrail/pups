@@ -15,7 +15,12 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
          $this->call(PetSeeder::class);
+
          $this->call(PictureSeeder::class);
+
+         $this->call(UpdatesSeeder::class);
+         $this->call(DonorSeeder::class);
+
 
         Model::reguard();
     }

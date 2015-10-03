@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Pet;
+use App\Update;
+use App\Donor;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -18,7 +20,11 @@ class PetsController extends Controller
     {
         $pets = Pet::all();
 
-        return view('pets.index', ['pets' => $pets]);
+        $updates = Update::all();
+
+        $donors = Donor::all();
+
+        return view('pets.index', ['pets' => $pets, 'updates' => $updates, 'donors' => $donors]);
     }
 
     /**
