@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return "Hows it going world?";
 });
+
+Route::get('/pets', ['as' => 'pets.index', 'uses' => 'PetsController@index']);
