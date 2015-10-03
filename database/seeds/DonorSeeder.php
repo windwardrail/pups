@@ -19,21 +19,21 @@ class DonorSeeder extends Seeder
             'first_name' => 'john',
             'last_name' => 'smith',
             'email' => 'johnsmith@yahoo.com',
-            'checkbox' => 'true'
+            'subscribed' => 'true'
         ]);
 
         Donor::create([
             'first_name' => 'jack',
             'last_name' => 'smith',
             'email' => 'jacksmith@yahoo.com',
-            'checkbox' => 'true'
+            'subscribed' => 'true'
         ]);
 
         Donor::create([
             'first_name' => 'jane',
             'last_name' => 'smith',
             'email' => 'janesmith@yahoo.com',
-            'checkbox' => 'true'
+            'subscribed' => 'true'
         ]);
     }
 }

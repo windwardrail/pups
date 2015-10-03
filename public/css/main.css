@@ -35,6 +35,23 @@
   	border-radius: 10px;
 
 }
+
+.information-wrapper .information {
+	color: #000;
+	background: #e3e3e3;
+	width: 15%;
+	float: left;
+	padding: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	text-align: center;
+  	font-size: 20px;
+  	border-radius: 10px;
+
+}
 .pet .pet-hover {
 	position: absolute;
 	top: 0;
@@ -66,6 +83,14 @@
 	text-align: center;
 	z-index: 3;
 	color: #FFF;
+}
+.petname {
+	color: #b61b3d;
+	font-size: 30px;
+}
+
+.pet-image img {
+	width: 30%;
 }
 .pet img {
 	width: 100%;
