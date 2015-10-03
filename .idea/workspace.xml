@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8815613-9b8c-46d0-b0e9-6bc31d2105d2" name="Default" comment="" />
+    <list default="true" id="c8815613-9b8c-46d0-b0e9-6bc31d2105d2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="pup.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -32,6 +35,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -72,7 +78,7 @@
     <option name="width" value="3232" />
     <option name="height" value="1756" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -306,12 +312,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/PetsController.php</url>
-          <line>18</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -447,31 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PetsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48518518">
-          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <marker date="1443858942260" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Show the form for creating a new resource. ..." />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Show the form for editing the specified resource. ..." />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3462963">
@@ -500,6 +475,31 @@
             <marker date="1443859508617" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1443859508617" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1443859508617" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PetsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6446125">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding>
+            <marker date="1443858942260" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1443858942260" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
