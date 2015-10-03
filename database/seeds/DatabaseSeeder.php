@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
          $this->call(PetSeeder::class);
+         $this->call(PictureSeeder::class);
 
         Model::reguard();
     }
