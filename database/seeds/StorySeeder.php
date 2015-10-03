@@ -1,5 +1,5 @@
 <?php
-
+use App\Pet;
 use Illuminate\Database\Seeder;
 
 class StorySeeder extends Seeder
@@ -19,6 +19,6 @@ class StorySeeder extends Seeder
          	$petStory = $faker->text;
          	$pet->story = $petStory;
          	$pet->save(); 
-        }
+        });
     }
 }
