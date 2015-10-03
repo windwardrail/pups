@@ -17,17 +17,19 @@ class UpdatesSeeder extends Seeder
 
         Update::create([
             'pet_id' => '1',
-            'content' => 'This pet has cancer'
+            'content' => 'This pet is sick'
         ]);
 
         Update::create([
             'pet_id' => '2',
-            'content' => 'This pet has butthole aids'
+            'content' => 'This pet is sick'
+
         ]);
 
         Update::create([
             'pet_id' => '2',
-            'content' => 'This pet is dead'
+            'content' => 'This pet is sick'
+
         ]);
     }
 }
