@@ -37,9 +37,11 @@ return array(
         ],
         'story' => [
             'title' => 'Story',
-            'type' => 'text'
+            'type' => 'wysiwyg'
         ]
-    ]
+    ],
+
+    'form_width' => 500,
 
 
 );
