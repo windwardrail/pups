@@ -14,7 +14,11 @@ class Pet extends Model
         return $this->hasMany('App\Update');
     }
 
-    public function getDefaultImage(){
+	public function donors() {
+		return $this->hasMany('App\Donor');
+	}
+
+	public function getDefaultImage(){
     	$images = $this->pictures;
     	if ($images->count() < 2) {
     		return $images->first();
