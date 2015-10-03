@@ -27,6 +27,6 @@ class Updates extends Migration
      */
     public function down()
     {
-        Schema::drop('=');
+        Schema::drop('updates');
     }
 }
