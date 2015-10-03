@@ -13,4 +13,23 @@ class Pet extends Model
     public function updates(){
         return $this->hasMany('App\Update');
     }
+
+    public function getDefaultImage(){
+    	$images = $this->pictures;
+    	if ($images->count() < 2) {
+    		return $images->first();
+    	} else {
+    		$defaultImage = $images->first(function($image) {
+    			return $image->is_default == 1;
+    		});
+    		if (isNull($defaultImage)) {
+    			$defaultImage = $images->first();
+    		}
+    		return $defaultImage;
+    	}
+    }
+    public function getDefaultImageURL() {
+    	$defaultImage = $this->getDefaultImage();
+    	return is_null($defaultImage) ? '' : $defaultImage->url;
+    }
 }

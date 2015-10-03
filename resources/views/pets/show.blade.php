@@ -3,7 +3,7 @@
 @section('content')
 	<div class="content">
 		<div class="pet-image">
-
+			<img src="{{ $pet->getDefaultImageURL() }}"/>
 		</div>
 		<div class="subcontent-wrapper">
 			<div class="pet-story">
