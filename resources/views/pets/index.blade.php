@@ -3,6 +3,13 @@
 @section('content')
 	<div class="subheader-wrapper">
 		<div class="headline">
+            <div class="donation-wrapper">
+        <a href="/donate" class="donation honor">
+          Donate in Honor
+          of a Pet or Loved One
+        </a>
+      </div>
+
     		<h1>Be a Pet's Guardian Angel!</h1>
     		<p>
     			You can be a PUP Guardian Angel by sponsoring one of these special dogs. The cost 
@@ -12,12 +19,6 @@
     			direct your donation to the general fund for PUP's special and medical needs dogs
     			rather than a specific dog.
     		</p>
-    	</div>
-    	<div class="donation-wrapper">
-	    	<a href="/donate" class="donation honor">
-	    		Donate in Honor
-	    		of a Pet or Loved One
-	    	</a>
     	</div>
     	<p class="clear"></p>
 	</div>

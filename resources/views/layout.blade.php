@@ -216,7 +216,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
     $( document ).ready(function() {
-function fixPetLook() {
+    function fixPetLook() {
                 $(".pet").each(function(){
                     var $this = $(this);
                     var img = $this.find("img");
@@ -247,8 +247,6 @@ function fixPetLook() {
                     }
                 });
             }
-            fixPetLook();
-            fixPetLook();
             fixPetLook();
 
         // selector - method - parameter || take this - do this - with these conditions

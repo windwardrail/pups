@@ -23,14 +23,11 @@
 }
 
 .headline {
-	width: 55%;
-	float: left;
 }
 
 .donation-wrapper {
 	width: 45%;
-	float: left;
-	padding-top: 30px;
+	float: right;
 }
 
 .donation-wrapper .donation {
