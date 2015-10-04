@@ -27,7 +27,7 @@
 	    	<div class="pet-wrapper">
 		    	<div class="pet" data-id="{{$pet->id}}" >
 			        <h1>{{ $pet->name }}</h1>
-			        <img src="{{ $pet->getDefaultImageURL() }}">
+			        <img src="{{ $pet->getDefaultImageURL(App\Picture::ORIGINAL) }}">
 			        <div class="pet-hover"></div>
 		    	</div>
 	    	</div>
