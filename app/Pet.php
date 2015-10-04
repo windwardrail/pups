@@ -26,7 +26,7 @@ class Pet extends Model
     		$defaultImage = $images->first(function($key, $image) {
     			return $image->is_default == 1;
     		});
-    		if (isNull($defaultImage)) {
+    		if (is_null($defaultImage)) {
     			$defaultImage = $images->first();
     		}
     		return $defaultImage;
