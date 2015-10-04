@@ -221,7 +221,7 @@
             var img = $this.find("img");
             var height = img.height();
             if (height < 225) {
-                img.css("width", "");
+                img.css("width", "auto");
                 img.css("height", "225");
             }
         });
