@@ -6,7 +6,7 @@
       <p>We gratefully accept donations via Paypal for your convenience.</p>
       <div class="form">
           <form method="post">
-              <table>
+              <table cellspacing="10" >
                 <tr>
                     <td>
                       First name
@@ -60,14 +60,25 @@
               <p class="disclaimer">
                 People United for Pets (PUP) is a 501(c)3 registered non-profit
                 organization and your contributions are tax-deductible to the
-                extent allowed by law.<br />
+                extent allowed by law.
                 See the difference your gift makes.
               </p>
           </form>
       </div>
   </div>
-  <div class="donation-messages">
-    <h1>Donation in memory or in honor of</h1>
-
-  </div>
+  @if(count($donations) > 0)
+    <div class="donation-messages">
+      <h2>Donation in memory or in honor of</h2>
+      @foreach($donations as $donation)
+          <div class="message-wrapper">
+              <div class="message">
+                  "{{$donation->comment}}"
+              </div>
+              <div class="author">
+                  {{ucwords($donation->first_name)}} {{ucwords($donation->last_name)}}
+              </div>
+          </div>
+      @endforeach
+    </div>
+  @endif
 @stop

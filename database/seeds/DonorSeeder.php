@@ -16,13 +16,16 @@ class DonorSeeder extends Seeder
         DB::table('donors')->truncate();
 
         Donor::create([
+            'pet_id' => '1',
             'first_name' => 'john',
             'last_name' => 'smith',
             'email' => 'johnsmith@yahoo.com',
-            'subscribed' => 'true'
+            'subscribed' => 'true',
+            'comment' => 'I love my dog'
         ]);
 
         Donor::create([
+            'pet_id' => '1',
             'first_name' => 'jack',
             'last_name' => 'smith',
             'email' => 'jacksmith@yahoo.com',
@@ -30,10 +33,12 @@ class DonorSeeder extends Seeder
         ]);
 
         Donor::create([
+            'pet_id' => '0',
             'first_name' => 'jane',
             'last_name' => 'smith',
             'email' => 'janesmith@yahoo.com',
-            'subscribed' => 'true'
+            'subscribed' => 'true',
+            'comment' => 'I miss my puppy so much'
         ]);
     }
 }
