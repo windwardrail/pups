@@ -211,10 +211,16 @@
             var width = img.width();
             if (height > width) {
                 img.css("width", "225");
-                    img.css("top", -(($this.height() - img.height()) / 2));
+                var top = (($this.height() - img.height()) / -2);
+                if (top < 0) {
+                    img.css("top", top);
+                }
             } else {
                 img.css("height", "225");
-                    img.css("left", -(($this.width() - img.width()) / 2));
+                var left = (($this.width() - img.width()) / -2);
+                if (left < 0) {
+                    img.css("left", left);
+                }
             }
         });
 

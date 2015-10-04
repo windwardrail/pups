@@ -147,16 +147,19 @@ border-radius: 5px; }
 	font-weight: bold;
 }
 
-.pet-image img {
+.left-content .pet-image img {
+	width: 100%;
+}
+.left-content .pet-image {
 	width: 90%;
 }
-
 .disclosure {
 	text-align: center;
 }
 .pet-wrapper {
 	width: 233px;
 	float: left;
+	margin: 0 0 10px 0;
 }
 
 
