@@ -4,8 +4,6 @@
 <div class="TEST">
     We gratefully accept payments via /PayPal for your convenience
     </div> 
-    <div class="TEST"> *Indicates a required field</div>
-    <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
 <div class="TEST"> *Inicates a required field</div>
 <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
     {{ csrf_field() }}

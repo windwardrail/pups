@@ -222,7 +222,8 @@
             var height = img.height();
             if (height < 225) {
                 img.css("width", "auto");
-                img.css("height", "225");
+                img.css("height", "350");
+                img.css("background-position", "center");
             }
         });
 
