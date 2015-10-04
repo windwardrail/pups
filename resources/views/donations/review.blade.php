@@ -10,6 +10,7 @@
 
 <form action="{{ route('donations.confirm', ['donor_id' => $donor->id]) }}">
     <input type="submit" value="Confirm">
+    <a href="{{ route('pets.index') }}" class="button cancel-button">Cancel</a>
 </form>
 
 @stop
