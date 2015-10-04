@@ -39,5 +39,30 @@ return array(
             'title'      => 'Pet',
             'name_field' => 'name'
         ]
+    ],
+
+    'actions' => [
+        'make_default' => [
+            'title' => 'Make Default',
+            'messages' => [
+                'success' => 'This picture is now the default image for its pet.',
+                'error' => 'There was an error!',
+                'active' => 'Making changes...'
+            ],
+            'action' => function(&$picture){
+                $pet = $picture->pet;
+
+                /* reset the default status of all pictures for this pet */
+                $pet->pictures->each(function($pet){
+                    $pet->is_default = false;
+                    $pet->save();
+                });
+
+                $picture->is_default = true;
+                $picture->save();
+
+                return true;
+            }
+        ]
     ]
 );
