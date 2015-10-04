@@ -40,7 +40,7 @@
             Add a message (optional)
             <textarea cols="40" rows="5" name="message"
              placeholder="Optional comment field for messages"></textarea>
-        </div>
+        
     </div>
 
     <div class=subscribe-box><label for="subscribed">Subscribe to email updates about {{ $pet->name }}?&nbsp; &nbsp;
