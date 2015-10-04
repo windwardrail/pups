@@ -24,6 +24,9 @@
 	    <div class="information messages">
 	    	Donor messages
 	    </div>
+	    <div class="information back">
+	    	Return to all pets
+	    </div>
 	</div>	
 	<div class="subcontent-wrapper">
 		<div class="pet-story">
