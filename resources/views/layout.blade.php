@@ -227,7 +227,7 @@
                         leftPosition = leftPosition + moveAmount;
                         currentImage -= 1;
                     } else {
-                        leftPosition = (totalImages - 1) * moveAmount * -1;
+                        leftPosition = (totalImages + 1) * moveAmount * -1;
                         currentImage = totalImages;
                     }
                     currentHeight = $(".pet-image-inner img")[currentImage - 1].height;
