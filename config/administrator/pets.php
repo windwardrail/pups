@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'title' => 'Pet',
+    'title' => 'Pets',
 
     'single' => 'pet',
 

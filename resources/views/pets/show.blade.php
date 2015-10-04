@@ -39,7 +39,7 @@
 		</div>
 		<div class="puppyupdates">
 			@foreach($pet->updates as $update) 
-				<p>{{ $update->content }}</p>
+				<p>{!! $update->content !!}</p>
 			@endforeach
 		</div>
 		<div class="newsfeed-updates">
