@@ -6,7 +6,6 @@
     </div> 
     <div class="TEST"> *Indicates a required field</div>
     <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
-</div>
 <div class="TEST"> *Inicates a required field</div>
 <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
     {{ csrf_field() }}
@@ -42,11 +41,6 @@
             <textarea cols="40" rows="5" name="message"
              placeholder="Optional comment field for messages"></textarea>
         <input type="number" min="0.01" step="0.01" name="donation" id="donation" required/>
-    </div>
-    <div class="TEST">
-        Add a message (optional)
-            <textarea cols="45" rows="5" name="message"
-                      placeholder="Optional comment field for messages"></textarea>
     </div>
 
     <div class=subscribe-box><label for="subscribed">Subscribe to email updates about {{ $pet->name }}?&nbsp; &nbsp;
