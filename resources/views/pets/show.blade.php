@@ -23,7 +23,7 @@
 	    </div>	
 		<div class="subcontent-wrapper">
 			<div class="pet-story">
-				<p> {{ $pet->story }} </p>
+				<p>{!! $pet->story !!}</p>
 			</div>
 		</div>
 		<div class="newsfeed-wrapper">
