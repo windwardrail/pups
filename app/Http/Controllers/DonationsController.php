@@ -24,7 +24,7 @@ class DonationsController extends Controller {
             'firstName'     => 'required',
             'lastName'      => 'required',
             'email'         => 'email',
-            'donation-type' => 'required',
+            //'donation-type' => 'required',
             'donation'      => 'required|numeric'
         ]);
 
@@ -40,7 +40,8 @@ class DonationsController extends Controller {
             return redirect()->back()->withErrors($validator->errors());
         }
 
-        $donation_type = $request->get('donation-type');
+        //$donation_type = $request->get('donation-type');
+        $donation_type = Donor::ONE_TIME;
         $amount = $request->get('donation');
 
         if ($pet_id) {
