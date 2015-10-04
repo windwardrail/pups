@@ -6,6 +6,9 @@
       <p>We gratefully accept donations via Paypal for your convenience.</p>
       <div class="form">
           <form action="{{ route('donations.submit', 0) }}" method="post">
+
+              {{ csrf_field() }}
+
               <table cellspacing="10" >
                 <tr>
                   <td colspan="2">

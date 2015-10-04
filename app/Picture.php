@@ -16,6 +16,7 @@ class Picture extends Model {
 
     public function getImage($size = Picture::ORIGINAL) {
       $path = '/uploads/pets/' . $size . '/';
-      return is_null($defaultImage) ? '' : $path . $this->url;
+
+      return $path . $this->url;
     }
 }

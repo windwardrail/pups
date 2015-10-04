@@ -24,6 +24,9 @@
 	    <div class="information messages">
 	    	Donor messages
 	    </div>
+	    <div class="information back">
+	    	Return to all pets
+	    </div>
 	</div>	
 	<div class="subcontent-wrapper">
 		<div class="pet-story">
@@ -39,7 +42,7 @@
 		</div>
 		<div class="puppyupdates">
 			@foreach($pet->updates as $update) 
-				<p>{{ $update->content }}</p>
+				<p>{!! $update->content !!}</p>
 			@endforeach
 		</div>
 		<div class="newsfeed-updates">
