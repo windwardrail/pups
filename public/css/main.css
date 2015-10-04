@@ -280,6 +280,10 @@ border-radius: 5px; }
 .suggested-donations h3 {
   margin-bottom: 0;
 }
+
+.basic-info {
+  text-align: center;
+}
 .suggested-donations .amount {
   background: #e1e1e1;
   border-radius: 10px;

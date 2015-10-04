@@ -156,14 +156,14 @@
                                                 Giving</a></li>
                                     </ul>
                                     
+                                    <div class ="basic-info">
                                     <p>
                                         Your donations help us pull in hundreds of dogs from local and high-kill shelters
                                         as well as dogs with medical or other special needs.  These dogs face insurmountable
                                         odds and often time require surgery and long-term care.  PUP provides thousands of
-                                        dollars in medical care to sick and injured dogs each year.<br />
-                                        Your donation helps us make the decisions that save lives.  Thank you for your generosity!
+                                        dollars in medical care to sick and injured dogs each year.
                                     </p>
-
+                                    </div>
 
                                 </div>
                                 <!-- end class sidenav -->
