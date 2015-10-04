@@ -155,6 +155,14 @@
                                         <li class="sidenav"><a class="sidenav" href="<?php echo $site; ?>corporate-matching.html">Corporate
                                                 Giving</a></li>
                                     </ul>
+                                    
+                                    <p>
+                                        Your donations help us pull in hundreds of dogs from local and high-kill shelters
+                                        as well as dogs with medical or other special needs.  These dogs face insurmountable
+                                        odds and often time require surgery and long-term care.  PUP provides thousands of
+                                        dollars in medical care to sick and injured dogs each year.<br />
+                                        Your donation helps us make the decisions that save lives.  Thank you for your generosity!
+                                    </p>
 
 
                                 </div>
@@ -215,38 +223,34 @@ function fixPetLook() {
                     var height = img.height();
                     var width = img.width();
                     if (height > width) {
-                        // if (height != "225" && width != "225") {
                             img.css("width", "225");
+                        // img = $this.find("img");
+                        // var top = (($this.height() - img.height()) / -2);
+                        // if (top < 0) {
+                        //     img.css("top", top);
                         // }
-                        img = $this.find("img");
-                        var top = (($this.height() - img.height()) / -2);
-                        if (top < 0) {
-                            img.css("top", top);
-                        }
-                        else {
-                            top = top * -1;
-                            img.css("top", top);
-                        }
+                        // else {
+                        //     top = top * -1;
+                        //     img.css("top", top);
+                        // }
                     } else {
-                        // if (height != "225" && width != "225") {
                             img.css("height", "225");
+                        // img = $this.find("img");
+                        // var left = (($this.width() - img.width()) / -2);
+                        // if (left < 0) {
+                        //     img.css("left", left);
                         // }
-                        img = $this.find("img");
-                        var left = (($this.width() - img.width()) / -2);
-                        if (left < 0) {
-                            img.css("left", left);
-                        }
-                        else {
-                            left = left * -1;
-                            img.css("left", left);
-                        }
+                        // else {
+                        //     left = left * -1;
+                        //     img.css("left", left);
+                        // }
                     }
                 });
             }
             fixPetLook();
             fixPetLook();
             fixPetLook();
-        
+
         // selector - method - parameter || take this - do this - with these conditions
         if($(".pet-image-inner").length > 0) {
             var currentImage = 1; // this is the image index
