@@ -234,7 +234,9 @@
                         //     img.css("top", top);
                         // }
                     } else {
+                        if (height / 255 * width > 225) {
                             img.css("height", "225");
+                        }
                         // img = $this.find("img");
                         // var left = (($this.width() - img.width()) / -2);
                         // if (left < 0) {
