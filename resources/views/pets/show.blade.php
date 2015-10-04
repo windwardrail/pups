@@ -18,15 +18,18 @@
 		</div>
 	</div>
 	<div class="information-wrapper">
+	@if ($pet->updates->count() > 1) 
 	    <a href="#updates" class="information updates">
 	    	Pet updates
 	    </a>
 	    <a href="#newsfeed" class="information messages">
 	    	Donor messages
 	    </a>
+	@endif 
 	    <a href="/" class="information back">
 	    	Return to all pets
 	    </a>
+
 	</div>	
 	<div class="subcontent-wrapper">
 		<div class="pet-story">
@@ -36,6 +39,7 @@
 			<p>{!! $pet->story !!}</p>
 		</div>
 	</div>
+	@if ($pet->updates->count() > 1)
 	<div class="newsfeed-wrapper">
 		<div class="newsfeed-updates" id="updates">
 			Pet updates
@@ -49,6 +53,7 @@
 			Messages from Donors
 		</div>
 	</div>
+	@endif
 </div>
 @stop
 

@@ -4,7 +4,7 @@
     <div class="TEST">
     We gratefully accept payments via /PayPal for your convenience
     </div> 
-    <div class="TEST"> *Inicates a required field</div>
+    <div class="TEST"> *Indicates a required field</div>
     <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
     {{ csrf_field() }}
     <div class="name-wrapper">
@@ -36,7 +36,7 @@
         </div>
         <div class="TEST">
             Add a message (optional)
-            <textarea cols="45" rows="5" name="message"
+            <textarea cols="40" rows="5" name="message"
              placeholder="Optional comment field for messages"></textarea>
 
         </div>
