@@ -216,6 +216,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
     $( document ).ready(function() {
+        $(".pet").each(function(){
+            var $this = $(this);
+            var img = $this.find("img");
+            var height = img.height();
+            if (height < 225) {
+                img.css("width", "");
+                img.css("height", "225");
+            }
+        }
+
     function fixPetLook() {
                 $(".pet").each(function(){
                     var $this = $(this);
