@@ -142,7 +142,11 @@ class DonationsController extends Controller {
         $donor->pending = false;
         $donor->save();
 
-        $msg = "Thank you for supporting {$donor->pet->name}!";
+        if($donor->isGeneral()){
+            $msg = "Thanks for your support!";
+        } else {
+            $msg = "Thank you for supporting {$donor->pet->name}!";
+        }
         return redirect()->route('pets.index')->with('message', $msg);
     }
 
