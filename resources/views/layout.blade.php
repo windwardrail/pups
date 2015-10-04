@@ -213,7 +213,9 @@
             var currentImage = 1; // this is the image index
             var moveAmount = 355; // this is the number of pixels we're moving the image
             var currentHeight = $(".pet-image-inner img")[currentImage-1].height;
-            $(".pet-image").css("height", currentHeight);
+            if (currentHeight > 0) {
+                $(".pet-image").css("height", currentHeight);
+            }
             var leftPosition = 0; // the left positioning of the picture
             var totalImages = $(".pet-image-inner img").length; // the number of pet images
             if (totalImages == 1) { // if the total images equal 1
