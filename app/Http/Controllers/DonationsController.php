@@ -20,8 +20,6 @@ class DonationsController extends Controller {
 
     public function makeDonation(Request $request, $pet_id) {
 
-        $pet = Pet::findOrFail($pet_id);
-
         $validator = Validator::make($request->all(), [
             'firstName'     => 'required',
             'lastName'      => 'required',
@@ -45,13 +43,25 @@ class DonationsController extends Controller {
         $donation_type = $request->get('donation-type');
         $amount = $request->get('donation');
 
-        $donor = new Donor([
-            'first_name' => $request->get('firstName'),
-            'last_name'  => $request->get('lastName'),
-            'email'      => $request->get('email'),
-            'subscribed' => $request->has('subscribed')
-        ]);
-        $pet->donors()->save($donor);
+        if ($pet_id) {
+            $pet = Pet::findOrFail($pet_id);
+            $donor = new Donor([
+                'first_name' => $request->get('firstName'),
+                'last_name'  => $request->get('lastName'),
+                'email'      => $request->get('email'),
+                'subscribed' => $request->has('subscribed')
+            ]);
+            $pet->donors()->save($donor);
+        } else {
+            $donor = new Donor([
+                'first_name' => $request->get('firstName'),
+                'last_name'  => $request->get('lastName'),
+                'email'      => $request->get('email'),
+                'subscribed' => $request->has('subscribed')
+            ]);
+            $donor->pet_id = 0;
+            $donor->save();
+        }
 
         /* Make the payment object */
         $payment = new Payment($amount, $donation_type, $donor);
@@ -60,6 +70,7 @@ class DonationsController extends Controller {
         try {
             $payment->prepare();
         } catch(PaymentErrorException $e){
+            Log::error($e->getInfo());
             return redirect()->back()->with('message', 'Sorry, a problem with paypal prevented us from processing your payment!');
         }
 

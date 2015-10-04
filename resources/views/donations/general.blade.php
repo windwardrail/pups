@@ -5,27 +5,32 @@
       <h1>Make a Gift Donation in Memory or Honor of a Beloved Person or Animal</h1>
       <p>We gratefully accept donations via Paypal for your convenience.</p>
       <div class="form">
-          <form method="post">
+          <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
               <table cellspacing="10" >
                 <tr>
+                  <td colspan="2">
+                     *Inicates a required field
+                  </td>
+                </tr>
+                <tr>
                     <td>
-                      First name
-                      <input type="text" required name="first_name" id="firstname" /></td>
+                      First name*
+                      <input type="text" required name="firstName" id="firstname" /></td>
                     <td>
-                      Last name
-                      <input type="text" required name="last_name" id="lastname" />
+                      Last name*
+                      <input type="text" required name="lastName" id="lastname" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                      Email address
+                      Email address*
                       <input type="email" required name="email" id="email" />
                     </td>
                 </tr>
                 <tr>
                     <td>
                       Donation type
-                      <select name="type">
+                      <select name="donation-type">
                         <option value="one">One Time</option>
                         <option value="recurring">Monthly</option>
                       </select>
@@ -33,7 +38,7 @@
                 </tr>
                 <tr>
                     <td>
-                      Donation Amount
+                      Donation Amount*
                       <input  type="number" min="0.01" step="0.01" name="donation" id="donation" required />
                     </td>
                     <td>
@@ -48,7 +53,7 @@
                 </tr>
                 <tr>
                     <td>
-                      <input type="checkbox" name="subscription" class="checkbox" />Add me to the email list
+                      <input type="checkbox" name="subscribed" class="checkbox" />Add me to the email list
                     </td>
                 </tr>
                 <tr>
