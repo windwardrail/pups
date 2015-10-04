@@ -32,7 +32,7 @@
 
 	</div>	
 	<div class="subcontent-wrapper">
-	@if(is_null($pet->story) || trim($pet->story) == '')
+	@if(!(is_null($pet->story) || trim($pet->story) == ''))
 		<div class="pet-story">
 			<div class="newsfeed-updates">
 				About

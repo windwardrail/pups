@@ -34,13 +34,13 @@
     </div>
     <div class="TEST">
         <div class=form-titles>Donation amount*</div>
-            <input type="number" min="0.01" step="1.00" name="donation" id="donation" required/>
+            <input type="number" min="0.00" step="1.00" name="donation" id="donation" required/>
         </div>
         <div class="TEST">
             Add a message (optional)
             <textarea cols="40" rows="5" name="message"
              placeholder="Optional comment field for messages"></textarea>
-        
+
     </div>
 
     <div class=subscribe-box><label for="subscribed">Subscribe to email updates about {{ $pet->name }}?&nbsp; &nbsp;
