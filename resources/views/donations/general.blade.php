@@ -125,7 +125,7 @@
     </div>
     <div class="last-paragraph">
       <h3>Other Donation Methods</h3>
-      <p style="margin-top: 0;">Download our donation form (pdf) here!</p>
+      <p style="margin-top: 0;">Download our donation form (pdf) <a href="http://www.pupdogrescue.org/downloads/pup-donation-form.pdf">here</a>!</p>
       <p>
           Monetary donations can be mailed directly to:<br />
           People United for Pets<br />
