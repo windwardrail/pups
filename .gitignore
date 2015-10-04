@@ -4,3 +4,6 @@ Homestead.yaml
 Homestead.json
 .env
 /.idea
+/public/uploads/pets/original
+/public/uploads/pets/square
+/public/uploads/pets/carousel
