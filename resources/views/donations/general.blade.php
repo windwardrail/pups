@@ -12,7 +12,7 @@
               <table cellspacing="10" >
                 <tr>
                   <td colspan="2">
-                     *Inicates a required field
+                     *Indicates a required field
                   </td>
                 </tr>
                 <tr>
