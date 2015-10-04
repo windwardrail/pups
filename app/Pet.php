@@ -23,7 +23,7 @@ class Pet extends Model
     	if ($images->count() < 2) {
     		return $images->first();
     	} else {
-    		$defaultImage = $images->first(function($image) {
+    		$defaultImage = $images->first(function($key, $image) {
     			return $image->is_default == 1;
     		});
     		if (isNull($defaultImage)) {
@@ -32,6 +32,7 @@ class Pet extends Model
     		return $defaultImage;
     	}
     }
+
     public function getDefaultImageURL() {
     	$defaultImage = $this->getDefaultImage();
     	return is_null($defaultImage) ? '' : $defaultImage->url;
