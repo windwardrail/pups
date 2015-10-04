@@ -224,7 +224,7 @@
                 img.css("width", "");
                 img.css("height", "225");
             }
-        }
+        });
 
     function fixPetLook() {
                 $(".pet").each(function(){
