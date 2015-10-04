@@ -241,11 +241,17 @@
                 var top = (($this.height() - img.height()) / -2);
                 if (top < 0) {
                     img.css("top", top);
+                } else {
+                    top = top * -1;
+                    img.css("top", top);
                 }
             } else {
                 img.css("height", "225");
                 var left = (($this.width() - img.width()) / -2);
                 if (left < 0) {
+                    img.css("left", left);
+                } else {
+                    left = left * -1;
                     img.css("left", left);
                 }
             }
