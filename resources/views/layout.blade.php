@@ -204,6 +204,33 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
     $( document ).ready(function() {
+        // selector - method - parameter || take this - do this - with these conditions
+        if($(".pet-image-inner").length > 0) {
+            var currentImage = 1; // this is the image index
+            var moveAmount = 355; // this is the number of pixels we're moving the image
+            var leftPosition = 0; // the left positioning of the picture
+            var totalImages = $(".pet-image-inner img").length; // the number of pet images
+            if (totalImages == 1) { // if the total images equal 1
+                $("#scroll-left").hide(); // we will hide the left arrow
+                $("#scroll-right").hide(); // we will hide the right arrow
+            } else {
+                $("#scroll-left").on("click", function() {
+                    if (currentImage > 1) {
+                        leftPosition = leftPosition + moveAmount;
+                        currentImage -= 1;
+                        $(".pet-image-inner").animate({"left": leftPosition}, 300);
+                    }
+                });
+                $("#scroll-right").on("click", function() {
+                    if (currentImage < totalImages) {
+                        leftPosition = leftPosition - moveAmount;
+                        currentImage += 1;
+                        $(".pet-image-inner").animate({"left": leftPosition}, 300);
+                    }
+                });
+        }
+
+        }
         $(".pet").each(function(){
             var $this = $(this);
             var img = $this.find("img");

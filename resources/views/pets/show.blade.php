@@ -9,9 +9,13 @@
 			{{ $pet->name }}
 		</div>
 	<div class="pet-image">
-		@foreach($pet->updates as $update) 
-		<img src="{{ $pet->getDefaultImageURL() }}"/>
-		@endforeach
+		<span id="scroll-left"><</span>
+		<span id="scroll-right">></span>
+		<div class="pet-image-inner">
+				@foreach($pet->updates as $update) 
+						<img src="{{ $pet->getDefaultImageURL() }}"/>
+				@endforeach
+		</div>
 	</div>
 	<div class="information-wrapper">
 	    <div class="information updates">

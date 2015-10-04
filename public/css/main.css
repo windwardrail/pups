@@ -148,10 +148,41 @@ border-radius: 5px; }
 }
 
 .left-content .pet-image img {
-	width: 100%;
+	width: 355px;
+  float: left;
 }
 .left-content .pet-image {
 	width: 90%;
+  overflow-x: hidden;
+  position: relative;
+}
+.left-content .pet-image-inner {
+  width: 1000px;
+  position: relative;
+}
+#scroll-left {
+  position: absolute;
+  bottom: 50%;
+  left: 10px;
+  color: #000;
+  font-style: bolder;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+#scroll-right {
+  position: absolute;
+  bottom: 50%;
+  right: 10px;
+  color: #000;
+  font-style: bolder;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  cursor: pointer;
+  z-index: 100;
 }
 .disclosure {
 	text-align: center;
