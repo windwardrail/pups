@@ -5,7 +5,7 @@
       <h1>Make a Gift Donation in Memory or Honor of a Beloved Person or Animal</h1>
       <p>We gratefully accept donations via Paypal for your convenience.</p>
       <div class="form">
-          <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
+          <form action="{{ route('donations.submit', 0) }}" method="post">
               <table cellspacing="10" >
                 <tr>
                   <td colspan="2">
