@@ -41,7 +41,7 @@
 		</div>
 		@endif
 	</div>
-	@if ($pet->updates->count() > 1)
+	@if ($pet->updates->count() > 0)
 	<div class="newsfeed-wrapper">
 		<div class="newsfeed-updates" id="updates">
 			Pet updates
