@@ -18,7 +18,17 @@ class Donor extends Model {
         'subscribed'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function pet() {
         return $this->belongsTo('App\Pet');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function transaction() {
+        return $this->hasOne('App\Transaction');
     }
 }

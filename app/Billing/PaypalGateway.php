@@ -2,7 +2,11 @@
 
 use Config;
 
-class PaypalGateway {
+abstract class PaypalGateway {
+
+    const PAYMENT_TYPE = 'Sale';
+    const CURRENCY_TYPE = 'USD';
+
     /**
      * '-------------------------------------------------------------------------------------------------------------------------------------------
      * hash_call: Function to perform the API call to PayPal using API signature

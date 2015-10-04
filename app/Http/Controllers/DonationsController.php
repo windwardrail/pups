@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Billing\Payment;
+use App\Billing\PaymentConfirmation;
 use App\Billing\PaymentErrorException;
 use App\Billing\PaymentReview;
 use App\Donor;
 use App\Pet;
+use App\Transaction;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Log;
@@ -89,8 +91,10 @@ class DonationsController extends Controller {
         }
 
         Session::put('paypal_token', $paypal_token);
-        Session::put('PayerID', $PayerID);
+        Session::put('payer_id', $PayerID);
         Session::put('pups_token', $pups_token);
+        Session::put('paypal_amount', $info['AMT']);
+        Session::put('paypal_token', $paypal_token);
 
         $payment = (object)[
             'first_name' => $info['FIRSTNAME'],
@@ -103,11 +107,32 @@ class DonationsController extends Controller {
     }
 
     public function confirmDonation(Request $request, $donor_id) {
-        $token = $request->get('token');
 
-        /* Todo -- Pull stuff out of session and confirm the payment with paypal */
+        $donor = Donor::findOrFail($donor_id);
 
-        return 'foobar';
+        $token = session('paypal_token');
+        $payerID = session('payer_id');
+        $finalPaymentAmt = session('paypal_amount');
+
+        $confirmation = new PaymentConfirmation($token, $payerID, $finalPaymentAmt);
+
+        try{
+            $confirmation->confirm();
+        } catch(PaymentErrorException $e){
+            Log::error($e->getInfo());
+            return redirect()->route('pets.index')->with('message', "We're sorry, an error occurred while communicating with Paypal. Please try again later.");
+        }
+
+        $donor->transaction()->save(new Transaction([
+            'transaction_id' => $confirmation->getTransactionId(),
+            'order_time' => $confirmation->getOrderTime()
+        ]));
+
+        $donor->pending = false;
+        $donor->save();
+
+        $msg = "Thank you for supporting {$donor->pet->name}!";
+        return redirect()->route('pets.index')->with('message', $msg);
     }
 
     public function general() {

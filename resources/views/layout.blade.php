@@ -128,6 +128,10 @@
 
                                 <div style="padding-left:30px;">
                                     <div class="container">
+                                        @if(Session::has('message'))
+                                            <p class="message">{{ session('message') }}</p>
+                                        @endif
+
                                         @yield('content')
                                     </div>
 
