@@ -212,6 +212,8 @@
         if($(".pet-image-inner").length > 0) {
             var currentImage = 1; // this is the image index
             var moveAmount = 355; // this is the number of pixels we're moving the image
+            var currentHeight = $(".pet-image-inner img")[currentImage-1].height;
+            $(".pet-image").css("height", currentHeight);
             var leftPosition = 0; // the left positioning of the picture
             var totalImages = $(".pet-image-inner img").length; // the number of pet images
             if (totalImages == 1) { // if the total images equal 1
@@ -222,48 +224,56 @@
                     if (currentImage > 1) {
                         leftPosition = leftPosition + moveAmount;
                         currentImage -= 1;
+                        currentHeight = $(".pet-image-inner img")[currentImage - 1].height;
                         $(".pet-image-inner").animate({"left": leftPosition}, 300);
+                        $(".pet-image").animate({"height": currentHeight}, 300);
                     }
                 });
                 $("#scroll-right").on("click", function() {
                     if (currentImage < totalImages) {
                         leftPosition = leftPosition - moveAmount;
                         currentImage += 1;
+                        currentHeight = $(".pet-image-inner img")[currentImage - 1].height;
                         $(".pet-image-inner").animate({"left": leftPosition}, 300);
+                        $(".pet-image").animate({"height": currentHeight}, 300);
                     }
                 });
         }
-
         }
-        $(".pet").each(function(){
-            var $this = $(this);
-            var img = $this.find("img");
-            var height = img.height();
-            var width = img.width();
-            if (height > width) {
-                img.css("width", "225");
-                img = $this.find("img");
-                var top = (($this.height() - img.height()) / -2);
-                if (top < 0) {
-                    img.css("top", top);
-                }
-                else {
-                    top = top * -1;
-                    img.css("top", top);
-                }
-            } else {
-                img.css("height", "225");
-                var left = (($this.width() - img.width()) / -2);
-                if (left < 0) {
-                    img.css("left", left);
-                }
-                else {
-                    left = left * -1;
-                    img.css("left", left);
-                }
+            function fixPetLook() {
+                $(".pet").each(function(){
+                    var $this = $(this);
+                    var img = $this.find("img");
+                    var height = img.height();
+                    var width = img.width();
+                    if (height > width) {
+                        img.css("width", "225");
+                        img = $this.find("img");
+                        var top = (($this.height() - img.height()) / -2);
+                        if (top < 0) {
+                            img.css("top", top);
+                        }
+                        else {
+                            top = top * -1;
+                            img.css("top", top);
+                        }
+                    } else {
+                        img.css("height", "225");
+                        img = $this.find("img");
+                        var left = (($this.width() - img.width()) / -2);
+                        if (left < 0) {
+                            img.css("left", left);
+                        }
+                        else {
+                            left = left * -1;
+                            img.css("left", left);
+                        }
+                    }
+                });
             }
-        });
-
+            fixPetLook();
+            fixPetLook();
+            fixPetLook();
         // Selector - Method - Parameter (Take this, Do this, With these conditions)
         $(".pet").mouseover(function(){
             var $this = $(this);
