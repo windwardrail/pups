@@ -227,7 +227,7 @@
                         leftPosition = leftPosition + moveAmount;
                         currentImage -= 1;
                     } else {
-                        leftPosition = totalImages * moveAmount * -1;
+                        leftPosition = (totalImages - 1) * moveAmount * -1;
                         currentImage = totalImages;
                     }
                     currentHeight = $(".pet-image-inner img")[currentImage - 1].height;
@@ -255,7 +255,9 @@
                     var height = img.height();
                     var width = img.width();
                     if (height > width) {
-                        img.css("width", "225");
+                        if (height != "225" && width != "225") {
+                            img.css("width", "225");
+                        }
                         img = $this.find("img");
                         var top = (($this.height() - img.height()) / -2);
                         if (top < 0) {
@@ -266,7 +268,9 @@
                             img.css("top", top);
                         }
                     } else {
-                        img.css("height", "225");
+                        if (height != "225" && width != "225") {
+                            img.css("height", "225");
+                        }
                         img = $this.find("img");
                         var left = (($this.width() - img.width()) / -2);
                         if (left < 0) {
