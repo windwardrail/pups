@@ -1,35 +1,54 @@
-<h2>Donate for {{ $pet->name }}</h2>
-
-<form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
-
+<div class=Donation-Name>
+    Donate for {{ $pet->name }}
+</div>
+    <div class="TEST">
+    We gratefully accept payments via /PayPal for your convenience
+    </div> 
+    <div class="TEST"> *Inicates a required field</div>
+    <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
     {{ csrf_field() }}
-
     <div class="name-wrapper">
-        {{ $errors->first('firstName') }}
-        <input type="text" name="firstName" id="firstName" required placeholder="First Name"/>
-        {{ $errors->first('lastName') }}
-        <input type="text" name="lastName" id="lastName" required placeholder="Last Name"/>
+        <div class=TEST>
+            <div class=form-titles>First Name*</div>
+            {{ $errors->first('firstName') }}
+            <input type="text" name="firstName" id="firstName" required placeholder="First Name"/>
+        </div>
+        <div class=TEST>
+            <div class=form-titles>Last Name*</div>
+            {{ $errors->first('lastName') }}
+            <input type="text" name="lastName" id="lastName" required placeholder="Last Name"/>
+        </div>
     </div>
-    <input type="email" name="email" id="email" placeholder="Email"/>
-    <select name="donation-type">
-        <option value="one">One Time</option>
-        <option value="recurring">Monthly</option>
-    </select>
+    <div class=TEST>
+    <div class=form-titles>Email address*</div>
+        <input type="email" name="email" id="email" placeholder="Email"/>
+    </div>
+     <div class=TEST>
+    <div class=form-titles>Donation type*</div>
+        <select name="donation-type">
+            <option value="one">One Time</option>
+            <option value="recurring">Monthly</option>
+        </select>
+    </div>
+    <div class=TEST>
+        <div class=form-titles>Donation amount*</div>
+            <input type="number" min="0.01" step="0.01" name="donation" id="donation" required/>
+        </div>
+        <div class=TEST>
+            Add a message (optional)
+            <textarea cols="45" rows="5" name="message" placeholder="Optional comment field for messages"></textarea>
 
-    <textarea cols="50" rows="5" name="message" placeholder="Optional comment field for messages"></textarea>
+        </div>
 
-    <input type="number" min="0.01" step="0.01" name="donation" id="donation" required/>
-
-    <label for="subscribed">Subscribe to this animal's updates?</label>
+    <div class=subscribe-box><label for="subscribed">Subscribe to email updates about {{ $pet->name }}?&nbsp; &nbsp; &nbsp;  </label>
     <input type="checkbox" name="subscribed" id="subscribed"/>
-
-    <input type="submit" value="Donate!">
+    </div>
+    <div class=donate-button>
+    <input type="submit" value="Donate now">
+    </div>
 </form>
-
-<div class="recommendation">
-    <h2>How much should I give</h2>
-    <ul>
-        <li>$25 = XXX</li>
-        <li>$50 = XXX</li>
-    </ul>
+<div class="disclosure">
+    As PUP is a 501(c)(3) registered non-profit organization, your contributions are 
+    tax-deductible to the extent allowed by law. Please know that PUP does not share or 
+    release our supporter information, including mail and e-mail addresses, to other organizations.
 </div>

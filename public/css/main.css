@@ -5,12 +5,23 @@
 	width: 700px !important;
 }
 
+donate-button {
+	margin: 10 0 10 0%;
+	background-color:  #dd1e26;
+}
 
 .headline h1 {
 	color: #dd1e26;
 }
 
+.TEST {
+	margin: 0 0 10 3%;
+}
 
+.Donation-Name {
+	font-size: 30px;
+	margin: 10 0 10 3%;
+}
 
 .headline {
 	width: 55%;
@@ -38,6 +49,17 @@
   	border-radius: 10px;
 
 }
+
+input[type=submit] {margin: 10 0 0 30%; padding:5px 15px; background:#b61b3d; color:white; border:0 none;
+cursor:pointer; font-size: 20px;
+-webkit-border-radius: 5px;
+border-radius: 5px; }
+
+
+.subscribe-box {
+	margin: 0 0 10 3%;
+}
+
 
 .newsfeed-updates {
 	color: #b61b3d;
@@ -78,6 +100,11 @@
 	word-wrap: break-word;
 }
 
+.form-titles {
+	font-weight: bold;
+	font-size: 16px;
+}
+
 .
 .pet .pet-hover {
 	position: absolute;
@@ -114,10 +141,15 @@
 .petname {
 	color: #b61b3d;
 	font-size: 30px;
+	font-weight: bold;
 }
 
 .pet-image img {
 	width: 90%;
+}
+
+.disclosure {
+	text-align: center;
 }
 .pet img {
 	width: 100%;
@@ -126,6 +158,7 @@
 	width: 33%;
 	float: left;
 }
+
 
 .clear {
 	clear: both;
@@ -137,4 +170,10 @@
 .right-content {
 	float: right;
 	width: 50%;
+	background: #e3e3e3; 
+	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	border-radius: 5px;
+  	margin: 20 0 0 0%
 }

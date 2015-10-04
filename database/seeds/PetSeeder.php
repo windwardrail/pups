@@ -28,5 +28,19 @@ class PetSeeder extends Seeder
         Pet::create([
             'name' => 'Spotty',
         ]);
+
+        Pet::create([
+            'name' => 'pluffy',
+            'age' => 6
+        ]);
+
+        Pet::create([
+            'name' => 'Spoopy',
+            'age' => 3
+        ]);
+
+        Pet::create([
+            'name' => 'Spring',
+        ]);
     }
 }
