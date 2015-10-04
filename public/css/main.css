@@ -162,12 +162,12 @@ border-radius: 5px; }
   position: relative;
 }
 .left-content .pet-image-inner {
-  width: 1000px;
+  width: 10000px;
   position: relative;
 }
 #scroll-left {
   position: absolute;
-  bottom: 50%;
+  bottom: 100px;
   left: 10px;
   color: #000;
   font-style: bolder;
@@ -179,7 +179,7 @@ border-radius: 5px; }
 }
 #scroll-right {
   position: absolute;
-  bottom: 50%;
+  bottom: 100px;
   right: 10px;
   color: #000;
   font-style: bolder;
