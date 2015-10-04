@@ -26,6 +26,7 @@
 		    	</div>
 	    	</div>
 	    @endforeach
+      <p class="clear"></p>
 	</div>
 @stop
 

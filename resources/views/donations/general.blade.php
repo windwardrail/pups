@@ -81,4 +81,55 @@
       @endforeach
     </div>
   @endif
+  <div class="suggested-donations">
+    <div id="close">&#10006;</div>
+    <h2>How much should I give?</h2>
+    <p>
+      We accept any amount of donations. The information below will give you an
+      idea of what your donation may cover.
+    </p>
+    <p>
+      People United for Pets (PUP) is a 501(c)3 registered non-profit organization
+      and your contributions are tax-deductible to the extent allowed by law.
+    </p>
+    <div class="donation-amounts">
+        <div class="amount" data-amount="25">
+          <span>$25</span> Pays for five microchips
+        </div>
+        <div class="amount" data-amount="40">
+          <span>$40</span> Pays for one grooming
+        </div>
+        <div class="amount" data-amount="50">
+          <span>$50</span> Pays for 25 collars &amp; 25 leashes
+        </div>
+        <div class="amount" data-amount="75">
+          <span>$75</span> Pays for one teeth cleaning
+        </div>
+        <div class="amount" data-amount="100">
+          <span>$100</span> Pays for neuter of one dog
+        </div>
+        <div class="amount" data-amount="120">
+          <span>$120</span> Pays for spay of one dog
+        </div>
+        <div class="amount" data-amount="">
+          Other amount
+        </div>
+    </div>
+    <div class="last-paragraph">
+      <h3>Other Donation Methods</h3>
+      <p style="margin-top: 0;">Download our donation form (pdf) here!</p>
+      <p>
+          Monetary donations can be mailed directly to:<br />
+          People United for Pets<br />
+          P.O. Box 1691<br />
+          Issaquah, WA 98027
+      </p>
+      <p>
+        Also do not forget to take a look into the PUP Wishlist. or consider a single donation. For donations of non-monteray items or donation questions, please contact Laura at donate@pupdogrescue.org
+      </p>
+      <p>
+        Thank you for your generosity!
+      </p>
+    </div>
+  </div>
 @stop

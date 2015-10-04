@@ -1,11 +1,11 @@
 .pets-wrapper {
-	
+	margin-top: 20px;
 }
 #rightcolumn .container {
 	width: 700px !important;
 }
 
-donate-button {
+.donate-button {
 	margin: 10 0 10 0%;
 	background-color:  #dd1e26;
 }
@@ -99,13 +99,10 @@ border-radius: 5px; }
 	clear: both;
 	word-wrap: break-word;
 }
-
 .form-titles {
 	font-weight: bold;
 	font-size: 16px;
 }
-
-.
 .pet .pet-hover {
 	position: absolute;
 	top: 0;
@@ -122,17 +119,23 @@ border-radius: 5px; }
 	box-sizing: border-box;
   	-moz-box-sizing: border-box;
   	-webkit-box-sizing: border-box;
-  	margin-right: 10px;
+  	margin-right: 8px;
   	position: relative;
   	z-index: 1;
   	cursor: pointer;
+    width: 225px;
+    height: 225px;
+    overflow: hidden;
+}
+.pet img {
+    position: relative;
 }
 .pet h1 {
 	position: absolute;
-	top: 0;
-	bottom: 0;
 	right: 0;
 	left: 0;
+  margin: 0;
+  line-height: 30px;
 	display: none;
 	text-align: center;
 	z-index: 3;
@@ -151,11 +154,8 @@ border-radius: 5px; }
 .disclosure {
 	text-align: center;
 }
-.pet img {
-	width: 100%;
-}
 .pet-wrapper {
-	width: 33%;
+	width: 233px;
 	float: left;
 }
 
@@ -215,4 +215,51 @@ border-radius: 5px; }
 }
 .donation-messages h2 {
   color: #be1e40;
+}
+.js-overlay {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: .6;
+}
+.suggested-donations {
+  display: none;
+  z-index: 1001;
+  position: absolute;
+  background: #fff;
+  width: 500px;
+  padding: 15px;
+  overflow-y: auto;
+}
+.suggested-donations h2 {
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+}
+#close {
+  float: right;
+  padding: 5px;
+  border: solid 1px #000;
+  cursor: pointer;
+}
+.suggested-donations h3 {
+  margin-bottom: 0;
+}
+.suggested-donations .amount {
+  background: #e1e1e1;
+  border-radius: 10px;
+  margin: 10px 30px;
+  padding: 15px 25px;
+  color: #ba2430;
+  font-size: 20px;
+}
+.suggested-donations .donation-amounts {
+  margin: 40px 0;
+}
+.suggested-donations .amount span {
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  font-size: 26px;  
 }

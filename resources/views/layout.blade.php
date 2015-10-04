@@ -200,9 +200,24 @@
     <!-- end center -->
 </div>
 <!-- end pagelong -->
+<div class="js-overlay"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
     $( document ).ready(function() {
+        $(".pet").each(function(){
+            var $this = $(this);
+            var img = $this.find("img");
+            var height = img.height();
+            var width = img.width();
+            if (height > width) {
+                img.css("width", "225");
+                    img.css("top", -(($this.height() - img.height()) / 2));
+            } else {
+                img.css("height", "225");
+                    img.css("left", -(($this.width() - img.width()) / 2));
+            }
+        });
+
         // Selector - Method - Parameter (Take this, Do this, With these conditions)
         $(".pet").mouseover(function(){
             var $this = $(this);
@@ -220,6 +235,43 @@
             document.location.href = "/pets/" + $this.data("id");
         });
     });
+    $(".container").on("click", ".amount", function() {
+        $(".suggested-donations").animate({top: "-1000px"}, 300).hide(300);
+        $(".js-overlay").hide();
+        $("#donation").val($(this).data("amount"));
+    })
+    function dropDownModal(clickedObject, parentObject, modal) {
+            modal = $(modal);
+            jsOverlay = $(".js-overlay");
+            var jsOverlayIsOn = false;
+            $(parentObject).on("click", clickedObject, function (e) {
+                    e.preventDefault();
+                    var windowWidth = $(window).width();
+                    var windowHeight = $(window).height();
+                    var modalWidth = modal.width();
+                    var modalHeight = modal.height();
+                    modalLeft = windowWidth / 2 - modalWidth / 2;
+                    modalTop = windowHeight / 2 - modalHeight / 2;
+                    modal.css({"left": modalLeft});
+                    modal.animate({top: modalTop}, 300);
+                    modal.show();
+                    jsOverlay.show();
+                    jsOverlayIsOn = true;
+            });
+            jsOverlay.on("click", function () {
+                if (jsOverlayIsOn && modal.css("display") == "block") {
+                    modal.animate({top: "-1000px"}, 300).hide(300);
+                    $(this).hide();
+                }
+            });
+            $("#close").on("click", function(e) {
+                if (jsOverlayIsOn && modal.css("display") == "block") {
+                    modal.animate({top: "-1000px"}, 300).hide(300);
+                    jsOverlay.hide();
+                }                
+            });
+    }
+    dropDownModal("#howmuch", ".container", ".suggested-donations");
 </script>
 </body>
 </html>
