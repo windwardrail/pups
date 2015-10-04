@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Billing\Payment;
+use App\Billing\PaymentErrorException;
+use App\Billing\PaymentReview;
 use App\Donor;
 use App\Pet;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use Illuminate\Support\Facades\Validator;
+use Log;
+use Validator;
+use Session;
+use Crypt;
 
 class DonationsController extends Controller {
+
     public function makeDonation(Request $request, $pet_id) {
 
         $pet = Pet::findOrFail($pet_id);
@@ -44,13 +51,63 @@ class DonationsController extends Controller {
         ]);
         $pet->donors()->save($donor);
 
-        /* Todo -- add code to submit payment to paypal */
+        /* Make the payment object */
+        $payment = new Payment($amount, $donation_type, $donor);
 
-        return 'success';
+        /* Prepare the payment for submission */
+        try {
+            $payment->prepare();
+        } catch(PaymentErrorException $e){
+            return redirect()->back()->with('message', 'Sorry, a problem with paypal prevented us from processing your payment!');
+        }
+
+        /* Redirect to Paypal */
+        $redirect_url = $payment->getSubmissionUrl();
+        return Redirect()->to($redirect_url);
     }
 
-    public function confirmDonation(Request $request) {
-        /* Todo -- recieve confirmation from paypal and enable the donor  */
+    public function reviewDonation(Request $request, $donor_id) {
+        $paypal_token = $request->get('token');
+        $pups_token = $request->get('pups_token');
+        $PayerID = $request->get('PayerID');
+
+        $donor = Donor::findOrFail($donor_id);
+
+        /* Check to make sure this paypal request originated from this donor */
+        if(Crypt::decrypt($pups_token) != $donor->email){
+            Log::warning('Bad pup token detected');
+
+            return redirect()->route('pets.index');
+        }
+
+        $review = new PaymentReview($paypal_token);
+        try{
+            $info = $review->getDetails();
+        } catch (PaymentErrorException $e){
+            Log::error($e->getInfo());
+            return redirect()->route('pets.index')->with('message', "We're sorry, an error occurred while communicating with Paypal. Please try again later.");
+        }
+
+        Session::put('paypal_token', $paypal_token);
+        Session::put('PayerID', $PayerID);
+        Session::put('pups_token', $pups_token);
+
+        $payment = (object)[
+            'first_name' => $info['FIRSTNAME'],
+            'last_name' => $info['LASTNAME'],
+            'amount' => $info['AMT'],
+            'email' => $info['EMAIL']
+        ];
+
+        return view('donations.review', compact('donor', 'payment'));
+    }
+
+    public function confirmDonation(Request $request, $donor_id) {
+        $token = $request->get('token');
+
+        /* Todo -- Pull stuff out of session and confirm the payment with paypal */
+
+        return 'foobar';
     }
 
     public function general() {
