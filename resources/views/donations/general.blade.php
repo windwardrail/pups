@@ -30,15 +30,15 @@
                       <input type="email" required name="email" id="email" />
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                      Donation type
-                      <select name="donation-type">
-                        <option value="one">One Time</option>
-                        <option value="recurring">Monthly</option>
-                      </select>
-                    </td>
-                </tr>
+                {{--<tr>--}}
+                    {{--<td>--}}
+                      {{--Donation type--}}
+                      {{--<select name="donation-type">--}}
+                        {{--<option value="one">One Time</option>--}}
+                        {{--<option value="recurring">Monthly</option>--}}
+                      {{--</select>--}}
+                    {{--</td>--}}
+                {{--</tr>--}}
                 <tr>
                     <td>
                       Donation Amount*
