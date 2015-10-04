@@ -235,10 +235,13 @@
                     if (currentImage < totalImages) {
                         leftPosition = leftPosition - moveAmount;
                         currentImage += 1;
-                        currentHeight = $(".pet-image-inner img")[currentImage - 1].height;
-                        $(".pet-image-inner").animate({"left": leftPosition}, 300);
-                        $(".pet-image").animate({"height": currentHeight}, 300);
+                    } else {
+                        leftPosition = 0;
+                        currentImage = 1;
                     }
+                    currentHeight = $(".pet-image-inner img")[currentImage - 1].height;
+                    $(".pet-image-inner").animate({"left": leftPosition}, 300);
+                    $(".pet-image").animate({"height": currentHeight}, 300);
                 });
         }
         }
