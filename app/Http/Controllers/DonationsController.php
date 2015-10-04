@@ -147,11 +147,9 @@ class DonationsController extends Controller {
     }
 
     public function general() {
-        //$donations = Donor::all();
-        $donations = Donor::all();
-        $donations = $donations->filter(function($item){
-            return (!is_null($item->comment) && $item->pet_id == 0);
-        });
+        $donations = Donor::where('pet_id', '=', 0)
+            ->whereNotNull('comment')
+            ->get();
         return view('donations.general', ['donations' => $donations]);
     }
 
