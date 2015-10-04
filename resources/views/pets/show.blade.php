@@ -23,6 +23,9 @@
 	    </div>	
 		<div class="subcontent-wrapper">
 			<div class="pet-story">
+				<div class="newsfeed-updates">
+				    About
+				</div>
 				<p>{!! $pet->story !!}</p>
 			</div>
 		</div>
