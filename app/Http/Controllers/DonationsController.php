@@ -115,7 +115,15 @@ class DonationsController extends Controller {
             'email' => $info['EMAIL']
         ];
 
-        return view('donations.review', compact('donor', 'payment'));
+        if($donor->pet_id == 0){
+            $is_general = true;
+            $pet = Pet::first();
+        } else {
+            $is_general = false;
+            $pet = $donor->pet;
+        }
+
+        return view('donations.review', compact('donor', 'payment', 'pet', 'is_general'));
     }
 
     public function confirmDonation(Request $request, $donor_id) {
