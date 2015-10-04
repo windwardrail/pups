@@ -18,15 +18,15 @@
 		</div>
 	</div>
 	<div class="information-wrapper">
-	    <div class="information updates">
+	    <a href="#updates" class="information updates">
 	    	Pet updates
-	    </div>
-	    <div class="information messages">
+	    </a>
+	    <a href="#newsfeed" class="information messages">
 	    	Donor messages
-	    </div>
-	    <div class="information back">
+	    </a>
+	    <a href="/" class="information back">
 	    	Return to all pets
-	    </div>
+	    </a>
 	</div>	
 	<div class="subcontent-wrapper">
 		<div class="pet-story">
@@ -37,7 +37,7 @@
 		</div>
 	</div>
 	<div class="newsfeed-wrapper">
-		<div class="newsfeed-updates">
+		<div class="newsfeed-updates" id="updates">
 			Pet updates
 		</div>
 		<div class="puppyupdates">
@@ -45,7 +45,7 @@
 				<p>{!! $update->content !!}</p>
 			@endforeach
 		</div>
-		<div class="newsfeed-updates">
+		<div class="newsfeed-updates" id="newsfeed">
 			Messages from Donors
 		</div>
 	</div>
