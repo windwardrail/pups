@@ -31,4 +31,13 @@ class Donor extends Model {
     public function transaction() {
         return $this->hasOne('App\Transaction');
     }
+
+    /**
+     * Is this a general donor rather than a donor for a specific pet?
+     *
+     * @return bool
+     */
+    public function isGeneral() {
+        return $this->pet_id == 0;
+    }
 }
