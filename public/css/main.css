@@ -81,7 +81,12 @@ border-radius: 5px; }
   	text-align: center;
   	font-size: 20px;
   	border-radius: 10px;
+  	cursor: pointer;
+}
 
+.information-wrapper .information:hover {
+	background: #b61b3d;
+	color: #FFF;
 }
 
 .subcontent-wrapper {
