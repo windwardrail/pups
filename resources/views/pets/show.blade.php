@@ -13,7 +13,7 @@
 		<span id="scroll-right">></span>
 		<div class="pet-image-inner">
 				@foreach($pet->pictures as $picture) 
-						<img src="{{ $picture->getImage(App\Picture::SQUARE) }}"/>
+						<img src="{{ $picture->getImage(App\Picture::CAROUSEL) }}"/>
 				@endforeach
 		</div>
 	</div>
