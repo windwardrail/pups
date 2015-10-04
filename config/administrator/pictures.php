@@ -10,7 +10,7 @@ return array(
     'columns'     => [
         'url' => [
             'title'  => 'Picture',
-            'output' => "<img src='/uploads/pets/originals/(:value)' height='100' />"
+            'output' => "<img src='/uploads/pets/original/(:value)' height='100' />"
         ]
     ],
 
@@ -19,7 +19,7 @@ return array(
             'title'      => 'Picture',
             'type'       => 'image',
             'naming'     => 'random',
-            'location'   => public_path() . '/uploads/pets/originals/',
+            'location'   => public_path() . '/uploads/pets/original/',
             'size_limit' => 2,
             'sizes'      => array(
                 array(232, 216, 'auto', public_path() . '/uploads/pets/square/', 100),

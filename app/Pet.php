@@ -33,8 +33,9 @@ class Pet extends Model
     	}
     }
 
-    public function getDefaultImageURL() {
+    public function getDefaultImageURL($size = Picture::ORIGINAL) {
     	$defaultImage = $this->getDefaultImage();
-    	return is_null($defaultImage) ? '' : $defaultImage->url;
+		$path = '/uploads/pets/' . $size . '/';
+    	return is_null($defaultImage) ? '' : $path . $defaultImage->url;
     }
 }
