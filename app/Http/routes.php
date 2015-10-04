@@ -17,3 +17,5 @@ Route::get('/pets', ['as' => 'pets.index', 'uses' => 'PetsController@index']);
 Route::get('/pets/{pet_id}', ['as' => 'pets.show', 'uses' => 'PetsController@show']);
 
 Route::post('/pets/{pet_id}/donate', ['as' => 'donations.submit', 'uses' => 'DonationsController@makeDonation']);
+
+Route::get('/donate', ['as' => 'donations.general', 'uses' => 'DonationsController@general']);

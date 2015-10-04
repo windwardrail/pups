@@ -9,12 +9,10 @@
     		</p>
     	</div>
     	<div class="donation-wrapper">
-	    	<div class="donation honor">
-	    		Donate to honor
-	    	</div>
-	    	<div class="donation general">
-	    		General donation
-	    	</div>
+	    	<a href="/donate" class="donation honor">
+	    		Donate in Honor
+	    		of a Pet or Loved One
+	    	</a>
     	</div>
     	<p class="clear"></p>
 	</div>
