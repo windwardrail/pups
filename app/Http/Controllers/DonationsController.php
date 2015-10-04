@@ -52,4 +52,10 @@ class DonationsController extends Controller {
     public function confirmDonation(Request $request) {
         /* Todo -- recieve confirmation from paypal and enable the donor  */
     }
+
+    public function general() {
+        $donations = Donor::all();
+        return view('donations.general', ['donations' => $donations]);
+    }
+
 }
