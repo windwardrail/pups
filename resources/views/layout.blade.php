@@ -249,7 +249,7 @@
                     }
                 });
             }
-            fixPetLook();
+//            fixPetLook();
 
         // selector - method - parameter || take this - do this - with these conditions
         if($(".pet-image-inner").length > 0) {
