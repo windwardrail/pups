@@ -9,7 +9,7 @@
     <p>${{ $payment->amount }}</p>
 
 <form action="{{ route('donations.confirm', ['donor_id' => $donor->id]) }}">
-    <input type="submit" value="Confirm">
+    <input type="submit" value="Confirm"><br>
     <a href="{{ route('pets.index') }}" class="button cancel-button">Cancel</a>
 </form>
 
