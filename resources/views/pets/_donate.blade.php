@@ -8,35 +8,36 @@
     <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
     {{ csrf_field() }}
     <div class="name-wrapper">
-        <div class=TEST>
+        <div class="TEST">
             <div class=form-titles>First Name*</div>
             {{ $errors->first('firstName') }}
             <input type="text" name="firstName" id="firstName" required placeholder="First Name"/>
         </div>
-        <div class=TEST>
+        <div class="TEST">
             <div class=form-titles>Last Name*</div>
             {{ $errors->first('lastName') }}
             <input type="text" name="lastName" id="lastName" required placeholder="Last Name"/>
         </div>
     </div>
-    <div class=TEST>
+    <div class="TEST">
     <div class=form-titles>Email address*</div>
         <input type="email" name="email" id="email" placeholder="Email"/>
     </div>
-     <div class=TEST>
+     <div class="TEST">
     <div class=form-titles>Donation type*</div>
         <select name="donation-type">
             <option value="one">One Time</option>
             <option value="recurring">Monthly</option>
         </select>
     </div>
-    <div class=TEST>
+    <div class="TEST">
         <div class=form-titles>Donation amount*</div>
             <input type="number" min="0.01" step="0.01" name="donation" id="donation" required/>
         </div>
-        <div class=TEST>
+        <div class="TEST">
             Add a message (optional)
-            <textarea cols="45" rows="5" name="message" placeholder="Optional comment field for messages"></textarea>
+            <textarea cols="45" rows="5" name="message"
+             placeholder="Optional comment field for messages"></textarea>
 
         </div>
 
