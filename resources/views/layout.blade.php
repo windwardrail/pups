@@ -208,6 +208,45 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
     $( document ).ready(function() {
+function fixPetLook() {
+                $(".pet").each(function(){
+                    var $this = $(this);
+                    var img = $this.find("img");
+                    var height = img.height();
+                    var width = img.width();
+                    if (height > width) {
+                        // if (height != "225" && width != "225") {
+                            img.css("width", "225");
+                        // }
+                        img = $this.find("img");
+                        var top = (($this.height() - img.height()) / -2);
+                        if (top < 0) {
+                            img.css("top", top);
+                        }
+                        else {
+                            top = top * -1;
+                            img.css("top", top);
+                        }
+                    } else {
+                        // if (height != "225" && width != "225") {
+                            img.css("height", "225");
+                        // }
+                        img = $this.find("img");
+                        var left = (($this.width() - img.width()) / -2);
+                        if (left < 0) {
+                            img.css("left", left);
+                        }
+                        else {
+                            left = left * -1;
+                            img.css("left", left);
+                        }
+                    }
+                });
+            }
+            fixPetLook();
+            fixPetLook();
+            fixPetLook();
+        
         // selector - method - parameter || take this - do this - with these conditions
         if($(".pet-image-inner").length > 0) {
             var currentImage = 1; // this is the image index
@@ -248,44 +287,6 @@
                 });
         }
         }
-            function fixPetLook() {
-                $(".pet").each(function(){
-                    var $this = $(this);
-                    var img = $this.find("img");
-                    var height = img.height();
-                    var width = img.width();
-                    if (height > width) {
-                        if (height != "225" && width != "225") {
-                            img.css("width", "225");
-                        }
-                        img = $this.find("img");
-                        var top = (($this.height() - img.height()) / -2);
-                        if (top < 0) {
-                            img.css("top", top);
-                        }
-                        else {
-                            top = top * -1;
-                            img.css("top", top);
-                        }
-                    } else {
-                        if (height != "225" && width != "225") {
-                            img.css("height", "225");
-                        }
-                        img = $this.find("img");
-                        var left = (($this.width() - img.width()) / -2);
-                        if (left < 0) {
-                            img.css("left", left);
-                        }
-                        else {
-                            left = left * -1;
-                            img.css("left", left);
-                        }
-                    }
-                });
-            }
-            fixPetLook();
-            fixPetLook();
-            fixPetLook();
         // Selector - Method - Parameter (Take this, Do this, With these conditions)
         $(".pet").mouseover(function(){
             var $this = $(this);
