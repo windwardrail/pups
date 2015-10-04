@@ -242,10 +242,12 @@
             var width = img.width();
             if (height > width) {
                 img.css("width", "225");
+                img = $this.find("img");
                 var top = (($this.height() - img.height()) / -2);
                 if (top < 0) {
                     img.css("top", top);
-                } else {
+                }
+                else {
                     top = top * -1;
                     img.css("top", top);
                 }
@@ -254,7 +256,8 @@
                 var left = (($this.width() - img.width()) / -2);
                 if (left < 0) {
                     img.css("left", left);
-                } else {
+                }
+                else {
                     left = left * -1;
                     img.css("left", left);
                 }

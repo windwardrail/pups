@@ -13,4 +13,9 @@ class Picture extends Model {
     public function pet() {
         return $this->belongsTo("App\Pet");
     }
+
+    public function getImage($size = Picture::ORIGINAL) {
+      $path = '/uploads/pets/' . $size . '/';
+      return is_null($defaultImage) ? '' : $path . $this->url;
+    }
 }
