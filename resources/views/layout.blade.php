@@ -48,7 +48,7 @@
                         <ul id="css3menu1" class="topmenu">
                             <li class="topfirst"><a href="<?php echo $site; ?>index.html" style="line-height:40px;"><span>Home</span> </a>
                             </li>
-                            <li class="topmenu" style="background-color: #000000;"><a style="line-height:40px;"
+                            <li class="topmenu"><a style="line-height:40px;"
                                                                                       href="adopt.html"><span>Adopt</span></a>
 
                                 <ul>
