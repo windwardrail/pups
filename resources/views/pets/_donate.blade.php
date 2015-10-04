@@ -1,4 +1,4 @@
-<h1>Donate for this puppy now!</h1>
+<h2>Donate for {{ $pet->name }}</h2>
 
 <form action="{{ route('donations.submit', [$pet->id]) }}" method="post">
 
@@ -16,7 +16,7 @@
         <option value="recurring">Monthly</option>
     </select>
 
-    <textarea cols="50" rows="50" name="message" placeholder="Optional comment field for messages"></textarea>
+    <textarea cols="50" rows="5" name="message" placeholder="Optional comment field for messages"></textarea>
 
     <input type="number" min="0.01" step="0.01" name="donation" id="donation" required/>
 

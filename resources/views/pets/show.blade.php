@@ -1,7 +1,10 @@
 @extends('layout')
 
 @section('content')
-	<div class="content">
+	<div class="right-content">
+		@include('pets._donate', ['pet' => $pet, 'errors' => $errors])
+	</div>
+	<div class="left-content">
 		<div class="petname">
 			{{ $pet->name }}
 		</div>
@@ -17,22 +20,25 @@
 	    	<div class="information messages">
 	    		Donor messages
 	    	</div>
-    	</div>
+	    </div>	
 		<div class="subcontent-wrapper">
 			<div class="pet-story">
-				<p>{{ $pet->story }}</p>
-			</div>
-			<div class="pet-newsfeed">
-				@foreach($pet->updates as $update) 
-				<div class"newsfeed-wrapper">
-					<p>{{ $update->content }}</p>
-				</div>
-				@endforeach
+				<p> {{ $pet->story }} </p>
 			</div>
 		</div>
-	</div>
-	<div class="right-content">
-		@include('pets._donate', ['pet' => $pet, 'errors' => $errors])
+		<div class="newsfeed-wrapper">
+			<div class="newsfeed-updates">
+				Puppy updates
+			</div>
+			<div class="puppyupdates">
+				@foreach($pet->updates as $update) 
+					<p>{{ $update->content }}</p>
+				@endforeach
+			</div>
+			<div class="newsfeed-updates">
+				Messages from Donors
+			</div>
+		</div>
 	</div>
 @stop
 

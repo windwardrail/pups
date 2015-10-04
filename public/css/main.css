@@ -5,9 +5,12 @@
 	width: 700px !important;
 }
 
+
 .headline h1 {
 	color: #dd1e26;
 }
+
+
 
 .headline {
 	width: 55%;
@@ -36,10 +39,16 @@
 
 }
 
+.newsfeed-updates {
+	color: #b61b3d;
+	font-size: 30px;
+}
+
 .information-wrapper .information {
 	color: #000;
 	background: #e3e3e3;
-	width: 15%;
+	width: 45%;
+	margin: 0 10 0 0%;
 	float: left;
 	padding: 5px;
 	padding-left: 0px;
@@ -52,6 +61,24 @@
   	border-radius: 10px;
 
 }
+
+.subcontent-wrapper {
+	color: #000;
+	background: #ffffff;
+	width: 95%;
+	padding: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	text-align: left;
+	font-size: 14px;
+	clear: both;
+	word-wrap: break-word;
+}
+
+.
 .pet .pet-hover {
 	position: absolute;
 	top: 0;
@@ -90,7 +117,7 @@
 }
 
 .pet-image img {
-	width: 30%;
+	width: 90%;
 }
 .pet img {
 	width: 100%;
@@ -102,4 +129,12 @@
 
 .clear {
 	clear: both;
+}
+.left-content {
+	float: left;
+	width: 50%;
+}
+.right-content {
+	float: right;
+	width: 50%;
 }
