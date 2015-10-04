@@ -32,12 +32,14 @@
 
 	</div>	
 	<div class="subcontent-wrapper">
+	@if(is_null($pet->story) || trim($pet->story) == '')
 		<div class="pet-story">
 			<div class="newsfeed-updates">
 				About
 			</div>
 			<p>{!! $pet->story !!}</p>
 		</div>
+		@endif
 	</div>
 	@if ($pet->updates->count() > 1)
 	<div class="newsfeed-wrapper">

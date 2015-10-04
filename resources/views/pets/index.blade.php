@@ -3,9 +3,21 @@
 @section('content')
 	<div class="subheader-wrapper">
 		<div class="headline">
-    		<h1>Be a Pet's Guardian Angel</h1>
+    		<h1>Be a Pet's Guardian Angel!</h1>
     		<p>
-    			Intro copy donate money for rescue puppies below:
+    			Your donations help us pull in hundreds of dogs from local and high-kill shelters
+    			as well as dogs with medical or other special needs.  These dogs face insurmountable
+    			odds and often time require surgery and long-term care.  PUP provides thousands of
+    			 dollars in medical care to sick and injured dogs each year.<br> 
+    			 <br>
+    			You can be a PUP Guardian Angel by sponsoring one of these special dogs. The cost 
+    			is a minimum of $10 per month.  You can stop your donation at any time or it will 
+    			automatically stop when the dog is adopted.  We will update you on the progress of 
+    			the dog you are sponsoring while he or she is in PUP's care. You may also elect to
+    			direct your donation to the general fund for PUP's special and medical needs dogs
+    			rather than a specific dog.  <br>
+    			<br>
+    			Your donation helps us make the decisions that save lives.  Thank you for your generosity!
     		</p>
     	</div>
     	<div class="donation-wrapper">
